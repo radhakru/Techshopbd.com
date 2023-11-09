@@ -9,12 +9,13 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features={//"./Features/UserRegistorAndLogin.feature"
 				
-				"./Features/ProductSearchAndFilter.feature"
+				//"./Features/ProductSearchAndFilter.feature"
+				"./Features/ProductDetails.feature"
 		},
 		glue={"com/techshopbd/StepDefination"},
 		dryRun=false,
 		monochrome=true,
-		//tags="@Filter",
+		//tags="@Signin",
 		//publish=true
 		plugin= {"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 				

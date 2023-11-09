@@ -37,7 +37,7 @@ public class UserSearchAndFilterObject {
 	private By searchButton = By.id("go-to-search-page");
 
 	// list of all products locator
-	private By listProduct = By.xpath("//div[@class='product-info']/p[1]");
+	private static By listProduct = By.xpath("//div[@class='product-info']/p[1]");
 
 	private By listCatagory = By.xpath("//ul[@class='category-list']/li/a");
 
@@ -49,6 +49,12 @@ public class UserSearchAndFilterObject {
 	private By filterPrice=By.xpath("//select[@id='browse-filter']");
 	
 
+	public static By getListProduct() {
+		return listProduct;
+	}
+	
+	
+	
 	public void enterProductNameInSearchBar(String productname) {
 		actions = new Actions(ldriver);
 		WebElement searchbar = ldriver.findElement(searchBar);

@@ -1,9 +1,13 @@
 Feature: User Registation and Login
 
+Background:
+	Given user go to the url
+	When user click on Login button
+
 @Regisation
 Scenario Outline: User should be register successfull 
-Given user go to the url
-When user click on Login button
+##Given user go to the url
+##When user click on Login button
 Then user can see SIGN IN and SIGN UP form
 Then user click on SIGN UP form
 Then user enter fullname "<FullName>"
@@ -27,8 +31,8 @@ Examples:
 
 @Signin
 Scenario Outline: User should be verify there profile
-Given user go to the url
-When user click on Login button
+##Given user go to the url
+##When user click on Login button
 Then user click on SIGN IN form
 Then user enter Email for login "<Email Id>"
 Then user enter Password for login "<Password>"
@@ -48,8 +52,8 @@ Examples:
 
 @Forget
 Scenario Outline: User should use forget password
-Given user go to the url
-When user click on Login button
+##Given user go to the url
+##When user click on Login button
 Then user click on forget password link
 Then user should enter login email id for receive recovery code "<Email Id>"
 Then user click on Submit button in forget password

@@ -66,7 +66,11 @@ public class Utility {
 		String filter=prop.getProperty("filterPrice");
 		return filter;
 	}
-	
+	public String getSearch() {
+		readConfigFile();
+		String search=prop.getProperty("Search");
+		return search;
+	}
 	
 	
 
